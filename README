@@ -1,0 +1,8 @@
+A bot that reads SMS messages from a google voice account then runs commands based off those messages.
+It uses Java Reflection to load methods at run-time from the .class files in the 'addons' folder to
+allow for functionality to be added without having to recompile the source files each time.
+
+The config.ini file contains the google voice username and password for the account you wish to use.
+
+Tick rate is an integer which determines the time in milliseconds between SMS reads. The higher this is,
+the less resources the bot will take.

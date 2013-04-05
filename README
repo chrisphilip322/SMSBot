@@ -1,8 +1,14 @@
-A bot that reads SMS messages from a google voice account then runs commands based off those messages.
-It uses Java Reflection to load methods at run-time from the .class files in the 'addons' folder to
+A bot that reads SMS messages from a google voice account then runs commands based off those messages. It uses Java Reflection to load methods at run-time from the .class files in the 'addons' folder to
 allow for functionality to be added without having to recompile the source files each time.
-
-The config.ini file contains the google voice username and password for the account you wish to use.
-
-Tick rate is an integer which determines the time in milliseconds between SMS reads. The higher this is,
+The config.ini file contains the google voice username and password for the account you wish to use. Tick rate is an integer which determines the time in milliseconds between SMS reads. The higher this is,
 the less resources the bot will take.
+
+HOW TO:
+1. Edit the config.ini to have your username and password for the google voice account you wish to use. Make sure that only basic authentication is enabled because anything more is not supported.
+2. Build the server by running build.bat if on a Windows machine, or build.sh if on a *nix machine. You may have to edit the java path in the build script if it doesn't build properly.
+3. Run the server by executing the run.bat, this should work on all machines.
+4. Send a text message to the account that the bot will log into. The first word of the command, space delimited, should be the method you wish to run then the rest of the words will be the arguments sent to that method.
+
+Default Modules:
+VMManage - has one command, vm, which can control a VirtualBox virtual machine.
+MsgMe - also has one command, msgMe, which causes a dialog box with your message to appear on the host machine.

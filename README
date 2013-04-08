@@ -6,7 +6,7 @@ the less resources the bot will take.
 HOW TO:
 1. Edit the config.ini to have your username and password for the google voice account you wish to use. Make sure that only basic authentication is enabled because anything more is not supported.
 2. Build the server by running build.bat if on a Windows machine, or build.sh if on a *nix machine. You may have to edit the java path in the build script if it doesn't build properly.
-3. Run the server by executing the run.bat, this should work on all machines.
+3. Run the server by executing the run.bat or run.sh depending again on your machine
 4. Send a text message to the account that the bot will log into. The first word of the command, space delimited, should be the method you wish to run then the rest of the words will be the arguments sent to that method.
 
 Default Modules:

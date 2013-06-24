@@ -28,6 +28,7 @@ public class SMSBot {
 		ClassLoader cl=new URLClassLoader(new URL[] {folder.toURI().toURL()});
 		for(File f:fileList) {
 			String name=f.getName();
+			if(!name.endsWith(".class")) continue;
 			name=name.substring(0,name.lastIndexOf('.'));
 			Class c=cl.loadClass(name);
 			Method methods[]=c.getDeclaredMethods();
